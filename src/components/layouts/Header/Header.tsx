@@ -13,8 +13,8 @@ const Header = () => {
     //main navbar
 
     <>
-      <header className="fixed top-0 left-0 w-full z-50 bg-color-primary">
-        <Container className="flex items-center py-[24.5px] justify-between">
+      <header className="fixed top-0 left-0 w-full bg-color-primary z-60 border-b-[0.5px] border-[#979797]">
+        <Container className="flex items-center py-[16.5px] justify-between">
           <div className="flex gap-20 ">
             <Link href="/">
               <Logo logoSize={155} />

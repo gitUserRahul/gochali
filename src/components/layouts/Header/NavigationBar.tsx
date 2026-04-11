@@ -91,37 +91,38 @@ const NavigationBar = () => {
     <NavigationMenu>
       <NavigationMenuList className="gap-6.5">
         {navItems.map((navItem, navIndex) => (
-          <NavigationMenuItem key={navIndex}>
-            {navItem.link ? (
+          <NavigationMenuItem
+            key={navIndex}
+            className="relative font-bold text-[14px] tracking-[1.5px] uppercase text-white "
+          >
+            {navItem.links ? (
               <>
-                <NavigationMenuTrigger
-                //   onPointerEnter={(e) => e.preventDefault()}
-                //   onPointerMove={(e) => e.preventDefault()}
-                >
+                <NavigationMenuTrigger className="uppercase tracking-[1.5px]">
                   {navItem.label}
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul>
+                <NavigationMenuContent className="absolute top-full transform -left-3.5 min-w-55 p-0">
+                  <ul className=" bg-white p-2 flex flex-col gap-1 rounded-[8px] mt-2">
                     {navItem.links.map((navLinkItem, navLinkIndex) => (
-                      <li key={navLinkIndex}>
-                        <NavigationMenuLink>
-                          <Link href={navLinkItem.href}>
-                            {navLinkItem.label}
-                          </Link>
-                        </NavigationMenuLink>
+                      <li
+                        key={navLinkIndex}
+                        className=" hover:bg-[#efefef] text-[#838383] hover:text-[#242424] rounded-[8px]"
+                      >
+                        {/* <NavigationMenuLink asChild> */}
+                        <Link
+                          href={navLinkItem.href}
+                          className="py-2.5 px-4 inline-block font-medium tracking-[1px] capitalize "
+                        >
+                          {navLinkItem.label}
+                        </Link>
+                        {/* </NavigationMenuLink> */}
                       </li>
                     ))}
                   </ul>
                 </NavigationMenuContent>
               </>
             ) : (
-              <NavigationMenuLink className="hover:bg-color-none ">
-                <Link
-                  href="NavigationMenuLink"
-                  className="font-bold text-[14px] tracking-[1.5px] uppercase text-white"
-                >
-                  {navItem.label}
-                </Link>
+              <NavigationMenuLink asChild>
+                <Link href="NavigationMenuLink">{navItem.label}</Link>
               </NavigationMenuLink>
             )}
           </NavigationMenuItem>
