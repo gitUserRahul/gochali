@@ -32,7 +32,7 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
   --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
+  /* --color-secondary: var(--secondary); */
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
   --color-popover-foreground: var(--popover-foreground);
@@ -47,9 +47,17 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
 
+  /* colors */
+  --color-primary-color: #FF6F61;
+  --color-secondary-color: #242424;
+
+
   /* banner-image */
   --background-image-banner-one: url('/assets/images/hero-section/banner-1.svg');
   --background-image-banner-two: url('/assets/images/hero-section/banner-2.svg');
+
+  /* WhoWeAre BG */
+  --background-image-who-we-are: url('/assets/images/about-img.png');
 
   /* background overlay */
   --background-image-hero-overlay: linear-gradient(180deg, rgba(26, 26, 26, 0.6) 66%, rgba(26, 26, 26, 0) 100%)

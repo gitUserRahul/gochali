@@ -4,7 +4,7 @@ import HeroSlider from "./HeroSlider";
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full h-217 ">
+    <div className="relative w-full h-217">
       {/* hero slider  */}
       <HeroSlider />
       <div className="absolute z-50 w-full h-full flex flex-col items-center justify-center gap-5 inset-0 bg-black/40 bg-gradient-to-b from-black/60 to-transparent">
