@@ -19,7 +19,7 @@ const WhoWeAre = () => {
                 {/* <span className="text-primary-color font-bold text-[20px] relative pb-2 before:absolute before:bottom-0 before:w-6.5 before:h-0.5 before:bg-primary-color ">
                   Who We Are
                 </span> */}
-                <h2 className="font-medium relative z-40 text-4xl leading-12.5 min-w-142.35 ">
+                <h2 className="font-medium relative z-40 text-4xl leading-12.5 min-w-143">
                   Tharu Heritage Carried <br />
                   Through Time and Gene
                   <span className="text-white ps-1.25">rations</span>

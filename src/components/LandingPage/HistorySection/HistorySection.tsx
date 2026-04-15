@@ -1,25 +1,41 @@
 import HistoryCard from "./HistoryCard";
-import Container from "@/components/layouts/Container.tsx";
+
+const HISTORY_CARDS = [
+  {
+    title: "Origins & Identity",
+    description:
+      "For centuries, long before modern borders were drawn, the Tharu people have called the dense forests and fertile plains of the Terai our home. We are not merely inhabitants but intrinsic custodians of this land...",
+    image: "/assets/images/history/history-one.svg",
+    frameImage: "/assets/images/history/frame.png",
+    isReversed: false,
+  },
+  {
+    title: "Heritage & Resilience",
+    description:
+      "From our unique art and festivals to our deep ecological knowledge, our heritage is a living testament to resilience. We've preserved our language, traditions, and community spirit through generations...",
+    image: "/assets/images/history/history-two.svg",
+    frameImage: "/assets/images/history/frame-two.png",
+    theme: "secondary",
+    isReversed: true,
+  },
+];
 
 const HistorySection = () => {
   return (
     <section>
-      <HistoryCard
-        historyClassName="flex items-center bg-secondary-color"
-        historyTitle="Origins & Identity"
-        historyDescription="For centuries, long before modern borders were drawn, the Tharu people have called the dense forests and fertile plains of the Terai our home. We are not merely inhabitants but intrinsic custodians of this land..."
-        historyImage="/assets/images/history/history-one.svg"
-        historyButtonClass="bg-primary-color max-w-[176]"
-        historyContentClass="max-w-[536px] ps-[35px]"
-      />
-      <HistoryCard
-        historyClassName="flex flex-row-reverse justify-between items-center bg-primary-color"
-        historyTitle="Heritage & Resilience"
-        historyDescription="From our unique art and festivals to our deep ecological knowledge, our heritage is a living testament to resilience. We've preserved our language, traditions, and community spirit through generations..."
-        historyImage="/assets/images/history/history-two.svg"
-        historyButtonClass="bg-secondary-color max-w-[176]"
-        historyContentClass="max-w-[496px]"
-      />
+      {HISTORY_CARDS.map((item, index) => {
+        return (
+          <HistoryCard
+            key={index}
+            isReversed={item.isReversed}
+            theme={item.theme}
+            historyTitle={item.title}
+            historyDescription={item.description}
+            historyImage={item.image}
+            frameImage={item.frameImage}
+          />
+        );
+      })}
     </section>
   );
 };
