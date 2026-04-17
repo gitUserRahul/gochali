@@ -6,24 +6,26 @@ import EyeBrowSection from "@/shared/EyeBrowSection.tsx";
 
 const WhoWeAre = () => {
   return (
-    <section className="py-40">
+    <section className="py-[80px]">
       <Container>
         <div className="flex justify-between">
-          <div className="flex gap-0">
-            <div className="max-w-110">
-              <div className="flex flex-col gap-3.75 pb-8.5 mt-21">
+          <div className="flex gap-[16px]">
+            <div className="max-w-[420px]">
+              <div className="flex flex-col gap-[16px] pb-8.5 mt-21">
+                <div>
                 <EyeBrowSection
-                  eyebrowTitle="Who We Are"
+                  eyebrowTitle="Who we are"
                   className="items-center"
                 />
                 {/* <span className="text-primary-color font-bold text-[20px] relative pb-2 before:absolute before:bottom-0 before:w-6.5 before:h-0.5 before:bg-primary-color ">
                   Who We Are
                 </span> */}
-                <h2 className="font-medium relative z-40 text-4xl leading-12.5 min-w-143">
+                <h2 className="font-medium relative z-40 text-4xl leading-[50px] text-nowrap mt-[12px]">
                   Tharu Heritage Carried <br />
                   Through Time and Gene
-                  <span className="text-white ps-1.25">rations</span>
+                  <span className="text-white">rations</span>
                 </h2>
+                </div>
                 <p className="text-[15px] leading-6.75">
                   The Tharu community has historically flourished in the Terai,
                   building a way of life closely connected to land, wildlife,
@@ -41,7 +43,7 @@ const WhoWeAre = () => {
             <div className="relative">
               <Image
                 src="/assets/images/about-img.png"
-                width={500}
+                width={474}
                 height={500}
                 alt="Tharu women photo"
               />

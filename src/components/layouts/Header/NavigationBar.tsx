@@ -39,7 +39,7 @@ export const navItems = [
     ],
   },
   {
-    label: "History & Heritage",
+    label: "History",
     links: [
       {
         label: "History",
@@ -73,31 +73,27 @@ export const navItems = [
     ],
   },
   {
-    label: "Gallery",
+    label: "Shop",
   },
   {
     label: "Blog",
   },
-  {
-    label: "About",
-  },
-  {
-    label: "Contact",
-  },
 ];
 
-const NavigationBar = () => {
+const NavigationBar = ({ isScrolled }) => {
   return (
     <NavigationMenu>
-      <NavigationMenuList className="gap-6.5">
+      <NavigationMenuList>
         {navItems.map((navItem, navIndex) => (
           <NavigationMenuItem
             key={navIndex}
-            className="relative font-bold text-[14px] tracking-[1.5px] uppercase text-white "
+            className={`relative font-semibold text-[14px] tracking-[1.5px] uppercase ${
+        isScrolled ? "text-[#595959]" : "text-white"
+      }`}
           >
             {navItem.links ? (
               <>
-                <NavigationMenuTrigger className="uppercase tracking-[1.5px]">
+                <NavigationMenuTrigger className="uppercase tracking-[1.5px] py-[10px] px-[20px]">
                   {navItem.label}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="absolute top-full transform -left-3.5 min-w-55 p-0">
@@ -110,7 +106,7 @@ const NavigationBar = () => {
                         {/* <NavigationMenuLink asChild> */}
                         <Link
                           href={navLinkItem.href}
-                          className="py-2.5 px-4 inline-block font-medium tracking-[1px] capitalize "
+                          className="py-2.5 px-4 inline-block font-medium tracking-[1px] capitalize"
                         >
                           {navLinkItem.label}
                         </Link>
