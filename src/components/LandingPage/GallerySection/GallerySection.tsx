@@ -24,7 +24,7 @@ const GALLERY_CONTENT = [
 
 const GallerySection = () => {
   return (
-    <section className="py-20 bg-[#030712] ">
+    <section className="py-20 bg-[#030712] mb-20">
       <Container>
         <div className="flex flex-col gap-2 pb-8 text-center">
           <EyeBrowSection
