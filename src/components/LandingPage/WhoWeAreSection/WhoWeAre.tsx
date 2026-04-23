@@ -1,8 +1,8 @@
 import React from "react";
-import Container from "@/components/layouts/Container.tsx";
+import Container from "@/components/layouts/Container";
 import Button from "@/shared/Button";
 import Image from "next/image";
-import EyeBrowSection from "@/shared/EyeBrowSection.tsx";
+import EyeBrowSection from "@/shared/EyeBrowSection";
 
 const WhoWeAre = () => {
   return (
@@ -36,7 +36,8 @@ const WhoWeAre = () => {
               </div>
               <Button
                 buttonText="ABOUT US"
-                className=" bg-red-400 max-w-39.5"
+                variant="dark"
+                className=" bg-secondary-color max-w-39.5"
               />
             </div>
 

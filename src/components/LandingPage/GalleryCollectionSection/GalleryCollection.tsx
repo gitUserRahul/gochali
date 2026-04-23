@@ -1,4 +1,4 @@
-import EyeBrowSection from "@/shared/EyeBrowSection.tsx";
+import EyeBrowSection from "@/shared/EyeBrowSection";
 
 const GalleryCollection = () => {
   return (

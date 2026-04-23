@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-60 border-b-[0.5px] transition-colors duration-300 ${
+      className={`fixed top-0 left-0 w-full z-60 border-b-[0.5px] transition-colors duration-200 ${
         isScrolled ? "bg-white border-gray-200 shadow-[0_5px_20px_rgba(0,0,0,0.1),_0_2px_5px_rgba(0,0,0,0.1)]" : "bg-color-primary border-[#7a7a7a]"
       }`}
     >
@@ -40,7 +40,7 @@ const Header = () => {
           <NavigationBar isScrolled={isScrolled} />
         </div>
 
-        <div className={`flex items-center gap-6 ${isScrolled ? "[&_svg]:text-[#7a7a7a]" : "[&_svg]:text-white"}`}>
+        <div className={`flex items-center duration-200 gap-6 ${isScrolled ? "[&_svg]:text-[#7a7a7a]" : "[&_svg]:text-white"}`}>
           <Link href="" className="text-[24px]">
             <CiSearch />
           </Link>

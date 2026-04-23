@@ -1,4 +1,4 @@
-import EyeBrowSection from "@/shared/EyeBrowSection.tsx";
+import EyeBrowSection from "@/shared/EyeBrowSection";
 import BlogCard from "./BlogCard";
 import Container from "@/components/layouts/Container";
 

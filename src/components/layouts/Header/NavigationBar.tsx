@@ -101,7 +101,7 @@ const NavigationBar = ({ isScrolled }) => {
                     {navItem.links.map((navLinkItem, navLinkIndex) => (
                       <li
                         key={navLinkIndex}
-                        className=" hover:bg-[#efefef] text-[#838383] hover:text-[#242424] rounded-[8px]"
+                        className=" hover:bg-[#efefef] text-[#838383] hover:text-[#242424] rounded-[8px] duration-200"
                       >
                         {/* <NavigationMenuLink asChild> */}
                         <Link

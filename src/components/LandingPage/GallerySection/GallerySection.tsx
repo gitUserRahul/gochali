@@ -1,6 +1,6 @@
 import React from "react";
-import EyeBrowSection from "@/shared/EyeBrowSection.tsx";
-import Container from "@/components/layouts/Container.tsx";
+import EyeBrowSection from "@/shared/EyeBrowSection";
+import Container from "@/components/layouts/Container";
 import GalleryCard from "./GalleryCard";
 import Button from "@/shared/Button";
 
@@ -49,7 +49,8 @@ const GallerySection = () => {
         <div className="flex justify-center w-full">
           <Button
             buttonText="See all Collections"
-            className="max-w-60.5 bg-primary-color hover:bg-amber-500"
+            className="max-w-60.5"
+            variant="red"
           />
         </div>
       </Container>
