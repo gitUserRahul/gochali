@@ -1,19 +1,48 @@
 import React from "react";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { cn } from "@/lib/utils";
 
-const Button = ({ buttonText, className }) => {
+const buttonVariants = {
+  red: {
+    button: "bg-primary-color text-white",
+    icon: "text-primary-color",
+  },
+  dark: {
+    button: "bg-secondary-color text-white",
+    icon: "text-secondary-color",
+  },
+  darkNoIcon: {
+    button: "bg-secondary-color text-white",
+    icon: null,
+  },
+  white: {
+    button: "bg-white text-secondary-color",
+    icon: "text-secondary-color",
+  },
+};
+
+const Button = ({ buttonText, variant = "red", className }) => {
+  const styles = buttonVariants[variant];
+
   return (
     <Link
-      className={`${className} flex items-center gap-2 ps-5 justify-center rounded-[30px] text-white w-full h-13.5`}
       href=""
+      className={cn(
+        styles.button,
+        "flex items-center gap-2 ps-5 justify-center rounded-[30px] w-full h-13.5", className
+      )}
     >
-      <span className="font-bold text-[12px] tracking-[1.5px] ">
+      <span className="font-bold text-[12px] tracking-[1.5px] uppercase">
         {buttonText}
       </span>
-      <span className="bg-white text-primary-color rounded-[25px] w-11 h-11 items-center justify-center flex ">
-        <FaArrowRightLong className="w-4.25 h-2.5" />
-      </span>
+
+      {/* show icon only if exists */}
+      {styles.icon && (
+        <span className="bg-white rounded-[25px] w-11 h-11 flex items-center justify-center">
+          <FaArrowRightLong className={cn("w-4 h-4", styles.icon)} />
+        </span>
+      )}
     </Link>
   );
 };

@@ -1,7 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const GalleryCard = ({ category, title, image }) => {
+type GalleryCardProps ={
+  category: string;
+  title: string;
+  image: string;
+
+}
+
+const GalleryCard = ({ category, title, image }: GalleryCardProps ) => {
   return (
     <div className=" basis-1/3 ">
       <div className="relative">

@@ -1,6 +1,15 @@
 import Image from "next/image";
 
-const BlogCard = ({ blogItem }) => {
+type BlogItem = {
+  authorImage: string;
+  authorName: string;
+  image: string;
+  date: string;
+  title: string;
+  description: string;
+};
+
+const BlogCard = ({ blogItem }: { blogItem: BlogItem }) => {
   const { authorImage, authorName, image, date, title, description } = blogItem;
   return (
     <>

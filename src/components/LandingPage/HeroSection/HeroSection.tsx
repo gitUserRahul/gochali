@@ -4,10 +4,10 @@ import HeroSlider from "./HeroSlider";
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full h-217">
+    <div className="relative w-full h-[100vh]">
       {/* hero slider  */}
       <HeroSlider />
-      <div className="absolute z-50 w-full h-full flex flex-col items-center justify-center gap-5 inset-0 bg-black/40 bg-gradient-to-b from-black/60 to-transparent">
+      <div className="absolute z-50 w-full h-full flex flex-col items-center justify-center gap-5 inset-0 bg-[linear-gradient(to_bottom,rgba(26,26,26,0.6)_66%,rgba(26,26,26,0)_100%)]">
         {/* hero content */}
         <div className="flex flex-col items-center gap-2 text-white max-w-185.25 w-full ">
           <span className="font-normal text-[15px]">
