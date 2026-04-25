@@ -30,17 +30,25 @@ const Button = ({ buttonText, variant = "red", className }) => {
       href=""
       className={cn(
         styles.button,
-        "flex items-center gap-2 ps-5 justify-center rounded-[30px] w-full h-13.5", className
+        "flex items-center gap-2 ps-5 justify-center rounded-[30px] w-full h-13.5",
+        "transition-all duration-300 ease-in-out",
+        "hover:opacity-80",
+        className
       )}
     >
       <span className="font-bold text-[12px] tracking-[1.5px] uppercase">
         {buttonText}
       </span>
 
-      {/* show icon only if exists */}
+      {/* icon */}
       {styles.icon && (
-        <span className="bg-white rounded-[25px] w-11 h-11 flex items-center justify-center">
-          <FaArrowRightLong className={cn("w-4 h-4", styles.icon)} />
+        <span className="bg-white rounded-[25px] w-11 h-11 flex items-center justify-center overflow-hidden">
+          <FaArrowRightLong
+            className={cn(
+              "w-4 h-4",
+              styles.icon
+            )}
+          />
         </span>
       )}
     </Link>

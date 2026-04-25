@@ -1,10 +1,10 @@
 import React from "react";
 import EyeBrowSection from "@/shared/EyeBrowSection";
 import Container from "@/components/layouts/Container";
-import GalleryCard from "./GalleryCard";
+import GalleryCard from "./HeritageCard";
 import Button from "@/shared/Button";
 
-const GALLERY_CONTENT = [
+const HERITAGE_CONTENT = [
   {
     category: "Cuisines",
     title: "Flavors of Tharus",
@@ -22,13 +22,13 @@ const GALLERY_CONTENT = [
   },
 ];
 
-const GallerySection = () => {
+const HeritageSection = () => {
   return (
-    <section className="py-20 bg-[#030712] mb-20">
+    <section className="py-[80px] bg-[#030712] mb-20">
       <Container>
         <div className="flex flex-col gap-2 pb-8 text-center">
           <EyeBrowSection
-            eyebrowTitle="Gallery"
+            eyebrowTitle="Our Heritage"
             className="before:left-1/2 before:-translate-x-1/2 "
           />
           <h3 className="text-4xl text-white">
@@ -36,7 +36,7 @@ const GallerySection = () => {
           </h3>
         </div>
         <div className="flex gap-7 mb-25">
-          {GALLERY_CONTENT.map((item, index) => (
+          {HERITAGE_CONTENT.map((item, index) => (
             <GalleryCard
               key={index}
               category={item.category}
@@ -58,4 +58,4 @@ const GallerySection = () => {
   );
 };
 
-export default GallerySection;
+export default HeritageSection;
