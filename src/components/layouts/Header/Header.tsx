@@ -33,7 +33,7 @@ const Header = () => {
     >
       <Container className="flex items-center h-[60px] justify-between">
         <div className="flex gap-20">
-          <Link href="/">
+          <Link className="w-[155px]" href="/">
             <Logo logoSize={155} isLogoDark={isScrolled} />
           </Link>
 

@@ -8,17 +8,17 @@ const HERITAGE_CONTENT = [
   {
     category: "Cuisines",
     title: "Flavors of Tharus",
-    image: "/assets/images/gallery/flavor-of-tharu.svg",
+    image: "/assets/images/heritage/flavor-of-tharu.svg",
   },
   {
     category: "Attires",
     title: "Dressed in Tradition",
-    image: "/assets/images/gallery/tradition-dress.svg",
+    image: "/assets/images/heritage/tradition-dress.svg",
   },
   {
     category: "Tools/Crafts",
     title: "Built by Hands",
-    image: "/assets/images/gallery/build-by-hands.svg",
+    image: "/assets/images/heritage/build-by-hands.svg",
   },
 ];
 

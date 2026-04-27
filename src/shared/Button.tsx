@@ -18,7 +18,7 @@ const buttonVariants = {
   },
   white: {
     button: "bg-white text-secondary-color",
-    icon: "text-secondary-color",
+    icon: null,
   },
 };
 
