@@ -1,6 +1,6 @@
-import EyeBrowSection from "@/shared/EyeBrowSection";
 import BlogCard from "./BlogCard";
 import Container from "@/components/layouts/Container";
+import SectionWrapper from "@/components/layouts/SectionWrapper";
 
 const BLOG_CONTENT = [
   {
@@ -36,10 +36,11 @@ const BlogsSection = () => {
   return (
     <section className="mb-[80px]">
       <Container className="flex flex-col gap-8">
-        <div className="flex flex-col gap-2">
-          <EyeBrowSection eyebrowTitle="Blogs" className="" />
-          <h3 className="text-4xl small-caps">News & Updates</h3>
-        </div>
+        <SectionWrapper
+          eyebrowTitle="Blogs"
+          heading="News & Updates"
+          headingClassName="text-black "
+        />
         <div className="flex gap-6">
           {BLOG_CONTENT.map((blogItem, blogIndex) => (
             <BlogCard blogItem={blogItem} key={blogIndex} />

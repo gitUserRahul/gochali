@@ -1,5 +1,5 @@
-import EyeBrowSection from "@/shared/EyeBrowSection.tsx";
 import GalleryGridSection from "./GalleryGridSection";
+import SectionWrapper from "@/components/layouts/SectionWrapper";
 
 const GalleryCollection = () => {
   const GALLERY_IMAGES = [
@@ -67,11 +67,12 @@ const GalleryCollection = () => {
   return (
     <section className="mb-[80px] text-center">
       <div className="flex flex-col gap-2">
-        <EyeBrowSection
+        <SectionWrapper
           eyebrowTitle="Gallery"
           className="before:-translate-x-1/2 before:left-1/2"
+          heading="From our Collections"
+          headingClassName="text-black"
         />
-        <h3 className="text-4xl small-caps">From our Collections</h3>
         <GalleryGridSection images={GALLERY_IMAGES} />
       </div>
     </section>

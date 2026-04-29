@@ -1,46 +1,39 @@
 import React from "react";
 import Container from "@/components/layouts/Container";
-import Button from "@/shared/Button";
 import Image from "next/image";
-import EyeBrowSection from "@/shared/EyeBrowSection";
+import SectionWrapper from "@/components/layouts/SectionWrapper";
 
 const WhoWeAre = () => {
   return (
-    <section className="py-[80px]">
+    <section className="py-20">
       <Container>
         <div className="flex justify-between">
-          <div className="flex gap-[16px]">
-            <div className="max-w-[420px]">
-              <div className="flex flex-col gap-[16px] pb-8.5 mt-21">
-                <div>
-                <EyeBrowSection
-                  eyebrowTitle="Who we are"
-                  className="items-center"
-                />
-                {/* <span className="text-primary-color font-bold text-[20px] relative pb-2 before:absolute before:bottom-0 before:w-6.5 before:h-0.5 before:bg-primary-color ">
-                  Who We Are
-                </span> */}
-                <h2 className="font-medium relative z-40 text-4xl leading-[50px] text-nowrap mt-[12px]">
-                  Tharu Heritage Carried <br />
-                  Through Time and Gene
-                  <span className="text-white">rations</span>
-                </h2>
-                </div>
-                <p className="text-[15px] leading-6.75">
-                  The Tharu community has historically flourished in the Terai,
+          <div className="flex gap-4">
+            {/* left content section */}
+            <div className="max-w-105 w-full flex flex-col gap-4  mt-21">
+              <SectionWrapper
+                eyebrowTitle="Who we are"
+                headerClassname="gap-0"
+                heading={
+                  <>
+                    Tharu Heritage Carried <br />
+                    Through Time and Gene
+                    <span className="text-white">rations</span>
+                  </>
+                }
+                headingClassName="relative z-40 font-medium mt-3 text-black leading-12.5"
+                paragraph="The Tharu community has historically flourished in the Terai,
                   building a way of life closely connected to land, wildlife,
                   and seasonal rhythms. Their knowledge of farming, craftwork,
                   architecture, and healing is passed down through family and
-                  ritual.{" "}
-                </p>
-              </div>
-              <Button
+                  ritual."
                 buttonText="ABOUT US"
                 variant="dark"
-                className=" bg-secondary-color max-w-39.5"
+                buttonClassName=" bg-secondary-color max-w-39.5 mt-8.5"
               />
             </div>
 
+            {/* right content section  */}
             <div className="relative">
               <Image
                 src="/assets/images/about-img.png"
@@ -68,6 +61,7 @@ const WhoWeAre = () => {
             </div>
           </div>
 
+          {/* center image of who we are */}
           <div className="flex flex-col gap-3.75 max-w-65 w-full pe-9.5 mt-7.75">
             <Image
               width={1000}

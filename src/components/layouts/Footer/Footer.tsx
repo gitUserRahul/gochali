@@ -1,7 +1,5 @@
 import React from "react";
-import EyeBrowSection from "@/shared/EyeBrowSection.tsx";
 import Container from "@/components/layouts/Container";
-import Button from "@/shared/Button";
 import Logo from "@/Logo/Logo";
 import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -9,20 +7,23 @@ import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
 import { footerData } from "./FooterData";
 import Link from "next/link";
+import SectionWrapper from "@/components/layouts/SectionWrapper";
 
 const Footer = () => {
   return (
     <footer className="bg-[#030712] text-white">
       <Container>
-        {/* footer header section */}
-        <div className="flex flex-col gap-4 items-center border-b-[0.5px] border-[#7a7a7a] p-10 ">
-          <EyeBrowSection
-            eyebrowTitle="Start a conversation"
-            className="before:-translate-x-1/2 before:left-1/2"
-          />
-          <h3 className="text-[40px] ">We’d Love to Hear from You</h3>
-          <Button buttonText="Contact Us" className="max-w-33" />
-        </div>
+        {/* TOP CTA */}
+        <SectionWrapper
+          eyebrowTitle="Start a conversation"
+          className="before:-translate-x-1/2 before:left-1/2"
+          heading="We’d Love to Hear from You"
+          buttonText="Contact Us"
+          buttonClassName="max-w-33"
+          buttonWrapperClassName=" flex flex-col gap-4 items-center p-10"
+          variant="darkNoIcon"
+          headerClassname="flex flex-col gap-4 items-center border-b-[0.5px] border-[#7a7a7a] p-10"
+        />
 
         {/* footer sidebar one */}
         <div className="py-10">

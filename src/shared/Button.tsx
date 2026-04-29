@@ -13,7 +13,7 @@ const buttonVariants = {
     icon: "text-secondary-color",
   },
   darkNoIcon: {
-    button: "bg-secondary-color text-white",
+    button: "bg-white text-black",
     icon: null,
   },
   white: {
@@ -33,7 +33,7 @@ const Button = ({ buttonText, variant = "red", className }) => {
         "flex items-center gap-2 ps-5 justify-center rounded-[30px] w-full h-13.5",
         "transition-all duration-300 ease-in-out",
         "hover:opacity-80",
-        className
+        className,
       )}
     >
       <span className="font-bold text-[12px] tracking-[1.5px] uppercase">
@@ -43,12 +43,7 @@ const Button = ({ buttonText, variant = "red", className }) => {
       {/* icon */}
       {styles.icon && (
         <span className="bg-white rounded-[25px] w-11 h-11 flex items-center justify-center overflow-hidden">
-          <FaArrowRightLong
-            className={cn(
-              "w-4 h-4",
-              styles.icon
-            )}
-          />
+          <FaArrowRightLong className={cn("w-4 h-4", styles.icon)} />
         </span>
       )}
     </Link>
