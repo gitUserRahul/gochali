@@ -71,7 +71,6 @@ const HistoryCard = ({
             paragraphClassName={historyActive.description}
             buttonText="LEARN MORE"
             variant={historyActive.buttonVariant}
-            buttonClassName="max-w-[176px]"
           />
         </div>
 

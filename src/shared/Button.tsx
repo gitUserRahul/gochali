@@ -30,7 +30,7 @@ const Button = ({ buttonText, variant = "red", className }) => {
       href=""
       className={cn(
         styles.button,
-        "flex items-center gap-2 ps-5 justify-center rounded-[30px] w-full h-13.5",
+        "flex items-center gap-2 ps-5 justify-center rounded-[30px] w-full py-1.5 ",
         "transition-all duration-300 ease-in-out",
         "hover:opacity-80",
         className,

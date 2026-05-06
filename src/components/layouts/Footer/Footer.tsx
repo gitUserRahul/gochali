@@ -11,7 +11,7 @@ import SectionWrapper from "@/components/layouts/SectionWrapper";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#030712] text-white">
+    <footer className="bg-[#030712] text-white pt-20 pb-10">
       <Container>
         {/* TOP CTA */}
         <SectionWrapper
@@ -19,15 +19,16 @@ const Footer = () => {
           className="before:-translate-x-1/2 before:left-1/2"
           heading="We’d Love to Hear from You"
           buttonText="Contact Us"
-          buttonClassName="max-w-33"
-          buttonWrapperClassName=" flex flex-col gap-4 items-center p-10"
+          buttonWrapperClassName=" flex flex-col gap-4 items-center"
           variant="darkNoIcon"
-          headerClassname="flex flex-col gap-4 items-center border-b-[0.5px] border-[#7a7a7a] p-10"
+          headerClassname="flex flex-col gap-4 items-center "
+          buttonClassName="ps-[20px] pr-[20px] py-[12px]"
+          wrapperClassName="flex flex-col gap-[26px] border-b-[0.5px] border-[#7a7a7a] pb-10 mb-10"
         />
 
         {/* footer sidebar one */}
-        <div className="py-10">
-          <div className="flex gap-36.25 py-10">
+        <div className="">
+          <div className="flex gap-36.25 pb-7.5">
             <div className="flex flex-col gap-6  max-w-[320px] items-start">
               <Logo logoSize={152} />
               <p className="text=[15px] text-[#FFFFFFB8] ">
@@ -76,7 +77,7 @@ const Footer = () => {
           </div>
 
           {/* footer's footer copyright */}
-          <p className="text-[#FFFFFFC9] text-start pt-22.5 text-[15px]">
+          <p className="text-[#FFFFFFC9] text-start text-[15px]">
             Copyright 2025 Gochali Theme, All Right Reserved
           </p>
         </div>

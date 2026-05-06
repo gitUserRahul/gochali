@@ -46,7 +46,7 @@ const SectionWrapper = ({
           <Button
             buttonText={buttonText}
             variant={variant}
-            className={cn("p-0", buttonClassName)}
+            className={cn("ps-[28px] pr-[6px] w-fit", buttonClassName)}
           />
         )}
       </div>

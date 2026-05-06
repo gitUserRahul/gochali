@@ -34,7 +34,6 @@ const HeritageSection = () => {
           heading="Discover the pillars of Tharu culture"
           buttonText="See all Collections"
           variant="red"
-          buttonClassName="max-w-60.5 "
           buttonWrapperClassName="flex justify-center w-full"
         >
           <div className="flex gap-7 mb-25">

@@ -29,7 +29,8 @@ const WhoWeAre = () => {
                   ritual."
                 buttonText="ABOUT US"
                 variant="dark"
-                buttonClassName=" bg-secondary-color max-w-39.5 mt-8.5"
+                buttonClassName=" bg-secondary-color"
+                wrapperClassName="flex flex-col gap-[32px]"
               />
             </div>
 

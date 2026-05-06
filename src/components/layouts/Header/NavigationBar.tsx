@@ -88,8 +88,8 @@ const NavigationBar = ({ isScrolled }) => {
           <NavigationMenuItem
             key={navIndex}
             className={`relative font-semibold text-[14px] tracking-[1.5px] uppercase ${
-        isScrolled ? "text-[#595959]" : "text-white"
-      }`}
+              isScrolled ? "text-[#595959]" : "text-white"
+            }`}
           >
             {navItem.links ? (
               <>
@@ -97,16 +97,16 @@ const NavigationBar = ({ isScrolled }) => {
                   {navItem.label}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="absolute top-full transform -left-3.5 min-w-55 p-0">
-                  <ul className=" bg-white p-2 flex flex-col gap-1 rounded-[8px] mt-2">
+                  <ul className=" bg-white py-2 flex flex-col gap-1 rounded-[8px] mt-2">
                     {navItem.links.map((navLinkItem, navLinkIndex) => (
                       <li
                         key={navLinkIndex}
-                        className=" hover:bg-[#efefef] text-[#838383] hover:text-[#242424] rounded-[8px] duration-200"
+                        className=" hover:bg-[#efefef] text-[#838383] hover:text-secondary-color rounded-[8px] duration-200 border-b-[#eef2f7] border-b last:border-b-0 w-full"
                       >
                         {/* <NavigationMenuLink asChild> */}
                         <Link
                           href={navLinkItem.href}
-                          className="py-2.5 px-4 inline-block font-medium tracking-[1px] capitalize"
+                          className="py-2.5 px-4 inline-block font-medium tracking-[1px] capitalize "
                         >
                           {navLinkItem.label}
                         </Link>
