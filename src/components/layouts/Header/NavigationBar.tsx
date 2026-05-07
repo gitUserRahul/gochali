@@ -82,7 +82,7 @@ export const navItems = [
 
 const NavigationBar = ({ isScrolled }) => {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="hidden lg:flex">
       <NavigationMenuList>
         {navItems.map((navItem, navIndex) => (
           <NavigationMenuItem

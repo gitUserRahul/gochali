@@ -23,7 +23,7 @@ const HERITAGE_CONTENT = [
 
 const HeritageSection = () => {
   return (
-    <section className="py-[80px] bg-[#030712] mb-20">
+    <section className="py-20 bg-[#030712] mb-20">
       <Container>
         <SectionWrapper
           wrapperClassName="text-center"
@@ -36,7 +36,7 @@ const HeritageSection = () => {
           variant="red"
           buttonWrapperClassName="flex justify-center w-full"
         >
-          <div className="flex gap-7 mb-25">
+          <div className="md:justify-between flex gap-7 mb-25 flex-wrap lg:flex-nowrap gap-y-20">
             {HERITAGE_CONTENT.map((item, index) => (
               <GalleryCard
                 key={index}

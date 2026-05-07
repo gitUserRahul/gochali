@@ -26,7 +26,7 @@ const HistoryCard = ({
       containerBG: "bg-primary-color",
       eyebrow: "text-secondary-color before:bg-secondary-color",
       description: "text-white",
-      container: "max-w-[510px]",
+      container: "max-w-[510px] ps-[35px]",
       frameClass:
         "absolute top-[36%] max-w-[240px] w-full min-h-[141px] left-0",
       buttonVariant: "dark",
@@ -38,9 +38,9 @@ const HistoryCard = ({
   return (
     <div
       className={cn(
-        "flex relative",
+        "flex relative flex-col",
         historyActive.containerBG,
-        isReversed ? "flex-row-reverse" : "flex-row",
+        isReversed ? "md:flex-row-reverse " : " md:flex-row",
       )}
     >
       {/* IMAGE SIDE */}
@@ -57,12 +57,12 @@ const HistoryCard = ({
       <div
         className={cn(
           "basis-1/2 w-full",
-          isReversed ? "ps-[calc((100vw_-_1240px)_/_2_)]" : "",
+          isReversed ? "ps-[calc((100vw_-_1240px)_/_2_)] " : "",
         )}
       >
         <div className={historyActive.container}>
           <SectionWrapper
-            wrapperClassName="flex flex-col gap-7.5 pt-12.5"
+            wrapperClassName="flex flex-col gap-7.5 py-[30px] md:pt-12.5"
             eyebrowTitle="Our Story"
             className={historyActive.eyebrow}
             heading={historyTitle}

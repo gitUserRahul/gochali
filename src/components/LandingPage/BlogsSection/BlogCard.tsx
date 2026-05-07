@@ -16,7 +16,7 @@ const BlogCard = ({ blogItem }: { blogItem: BlogItem }) => {
       {/* blog image and  date */}
 
       {/* blog content */}
-      <div className="border rounded-[12px] border-[#CFDDE2]">
+      <div className="border rounded-[12px] border-[#CFDDE2] sm:basis-[calc(50%-24px)] lg:basis-[calc(33%-32px)] w-full">
         <div className="relative ">
           <div className="rounded-t-[12px] overflow-hidden ">
             <Image

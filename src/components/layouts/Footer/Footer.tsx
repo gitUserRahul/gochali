@@ -53,9 +53,12 @@ const Footer = () => {
 
             {/* footer sidebar Two */}
 
-            <div className=" flex gap-34 basis-[calc(100%-320px)]">
+            <div className="flex gap-34  flex-wrap md:justify-between md:gap-14 lg:flex-nowrap">
               {footerData.map((footerItem) => (
-                <div key={footerItem.title}>
+                <div
+                  key={footerItem.title}
+                  className="basis-full md:basis-[calc(50%-56px)] lg:basis-[calc(33%-320px)]"
+                >
                   <h4 className="uppercase font-bold text-[15px] tracking-[1.5px] mb-6.5">
                     {footerItem.title}
                   </h4>

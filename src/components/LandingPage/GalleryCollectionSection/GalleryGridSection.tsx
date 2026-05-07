@@ -29,10 +29,13 @@ const GalleryGridSection: React.FC<{ images: GalleryImage[] }> = ({
 
   return (
     <Container>
-      <section className="h-241 w-full mt-9">
-        <div className="grid grid-cols-4 gap-4 h-full">
+      <section className=" w-full mt-9">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 h-full">
           {columns.map((col, idx) => (
-            <div key={idx} className="flex flex-col gap-4 h-full justify-around">
+            <div
+              key={idx}
+              className="flex flex-col gap-4 h-full justify-around"
+            >
               {col.map((img) => (
                 <div
                   key={img.id}

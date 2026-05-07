@@ -27,7 +27,7 @@ const SectionWrapper = ({
         <div className={cn("flex flex-col gap-4", contentClassName)}>
           <Tag
             className={cn(
-              " text-4xl text-white  text-nowrap",
+              " text-4xl text-white  sm:text-nowrap",
               headingClassName,
             )}
           >

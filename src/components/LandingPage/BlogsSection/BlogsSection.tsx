@@ -41,7 +41,7 @@ const BlogsSection = () => {
           heading="News & Updates"
           headingClassName="text-black "
         />
-        <div className="flex gap-6">
+        <div className="flex gap-6 md:justify-between lg:flex-nowrap flex-wrap">
           {BLOG_CONTENT.map((blogItem, blogIndex) => (
             <BlogCard blogItem={blogItem} key={blogIndex} />
           ))}
