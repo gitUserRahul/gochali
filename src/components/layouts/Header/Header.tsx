@@ -8,9 +8,18 @@ import NavigationBar from "./NavigationBar";
 import { CiSearch } from "react-icons/ci";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { FaRegUser } from "react-icons/fa";
+import { FcMenu } from "react-icons/fc";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // toggle menu bar
+  const toggleMenu = () => {
+    setIsMenuOpen(() => !isMenuOpen);
+  };
+
+  console.log(isMenuOpen);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,7 +37,9 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-60 border-b-[0.5px] transition-colors duration-200 ${
-        isScrolled ? "bg-white border-gray-200 shadow-[0_5px_20px_rgba(0,0,0,0.1),_0_2px_5px_rgba(0,0,0,0.1)]" : "bg-color-primary border-[#7a7a7a]"
+        isScrolled
+          ? "bg-white border-gray-200 shadow-[0_5px_20px_rgba(0,0,0,0.1),_0_2px_5px_rgba(0,0,0,0.1)]"
+          : "bg-color-primary border-[#7a7a7a]"
       }`}
     >
       <Container className="flex items-center h-[60px] justify-between">
@@ -37,10 +48,12 @@ const Header = () => {
             <Logo logoSize={155} isLogoDark={isScrolled} />
           </Link>
 
-          <NavigationBar isScrolled={isScrolled} />
+          <NavigationBar isScrolled={isScrolled} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         </div>
 
-        <div className={`flex items-center duration-200 gap-6 ${isScrolled ? "[&_svg]:text-[#7a7a7a]" : "[&_svg]:text-white"}`}>
+        <div
+          className={`flex items-center duration-200 gap-6 ${isScrolled ? "[&_svg]:text-[#7a7a7a]" : "[&_svg]:text-white"}`}
+        >
           <Link href="" className="text-[24px]">
             <CiSearch />
           </Link>
@@ -50,6 +63,9 @@ const Header = () => {
           <Link href="" className="text-[18px]">
             <FaRegUser />
           </Link>
+          <button className="text-[18px] block lg:hidden" onClick={toggleMenu}>
+            <FcMenu />
+          </button>
         </div>
       </Container>
     </header>

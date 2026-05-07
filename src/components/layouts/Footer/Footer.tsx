@@ -19,6 +19,7 @@ const Footer = () => {
           className="before:-translate-x-1/2 before:left-1/2"
           heading="We’d Love to Hear from You"
           buttonText="Contact Us"
+          headingClassName="text-center"
           buttonWrapperClassName=" flex flex-col gap-4 items-center"
           variant="darkNoIcon"
           headerClassname="flex flex-col gap-4 items-center "
@@ -27,9 +28,9 @@ const Footer = () => {
         />
 
         {/* footer sidebar one */}
-        <div className="">
-          <div className="flex gap-36.25 pb-7.5">
-            <div className="flex flex-col gap-6  max-w-[320px] items-start">
+        <div>
+          <div className="flex gap-36.25 pb-7.5 flex-col sm:flex-row">
+            <div className="flex flex-col gap-6  sm:max-w-[320px] items-start">
               <Logo logoSize={152} />
               <p className="text=[15px] text-[#FFFFFFB8] ">
                 Towards the end of the 19th century, with the advent of the New
@@ -53,11 +54,11 @@ const Footer = () => {
 
             {/* footer sidebar Two */}
 
-            <div className="flex gap-34  flex-wrap md:justify-between md:gap-14 lg:flex-nowrap">
+            <div className="flex gap-0 lg:gap-34  flex-wrap justify-between md:gap-14 lg:flex-nowrap">
               {footerData.map((footerItem) => (
                 <div
                   key={footerItem.title}
-                  className="basis-full md:basis-[calc(50%-56px)] lg:basis-[calc(33%-320px)]"
+                  className="basis-[calc(50%-56px)] lg:basis-[calc(33%-320px)]"
                 >
                   <h4 className="uppercase font-bold text-[15px] tracking-[1.5px] mb-6.5">
                     {footerItem.title}
