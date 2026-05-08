@@ -81,7 +81,7 @@ export const navItems = [
   },
 ];
 
-const NavigationBar = ({ isScrolled, isMenuOpen, setIsMenuOpen }) => {
+const NavigationBar = ({ isScrolled, isMenuOpen }) => {
   return (
     <>
       <NavigationMenu
@@ -93,16 +93,15 @@ const NavigationBar = ({ isScrolled, isMenuOpen, setIsMenuOpen }) => {
         )}
       >
         {isMenuOpen && (
-          <div className="flex justify-between w-full p-4 border-b border-b-[rgb(238, 238, 238)]">
+          <div className="flex w-full p-4 border-b border-b-[rgb(238, 238, 238)]">
             <span className="text-[16px] text-[rgb(41, 41, 41)] font-semibold">
               Menu
-            </span>{" "}
-            <button onClick={() => setIsMenuOpen(false)}>X</button>
+            </span>
           </div>
         )}
         <NavigationMenuList
           className={cn(
-            isMenuOpen && "flex flex-col w-[500px] items-start p-4 gap-4 ",
+            isMenuOpen && "flex flex-col w-125 items-start p-4 gap-4 ",
           )}
         >
           {navItems.map((navItem, navIndex) => (
@@ -119,12 +118,12 @@ const NavigationBar = ({ isScrolled, isMenuOpen, setIsMenuOpen }) => {
                   <NavigationMenuTrigger
                     className={cn(
                       "uppercase tracking-[1.5px]", // Constant styles
-                      isMenuOpen ? "p-0" : "py-[10px] px-[20px]", // Mutually exclusive padding
+                      isMenuOpen ? "p-0" : "py-2.5 px-5", // Mutually exclusive padding
                     )}
                   >
                     {navItem.label}
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="absolute top-full transform -left-3.5 min-w-55 ">
+                  <NavigationMenuContent className="absolute top-full transform -left-3.5 min-w-55 z-10">
                     <ul className="bg-white py-2 flex flex-col gap-1 rounded-[8px] mt-2">
                       {navItem.links.map((navLinkItem, navLinkIndex) => (
                         <li
@@ -150,7 +149,7 @@ const NavigationBar = ({ isScrolled, isMenuOpen, setIsMenuOpen }) => {
               ) : (
                 <NavigationMenuLink
                   asChild
-                  className={cn(isMenuOpen ? "p-0" : "py-[10px] px-[20px]")}
+                  className={cn(isMenuOpen ? "p-0" : "py-2.5 px-5")}
                 >
                   <Link href="NavigationMenuLink">{navItem.label}</Link>
                 </NavigationMenuLink>

@@ -9,17 +9,10 @@ import { CiSearch } from "react-icons/ci";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { FaRegUser } from "react-icons/fa";
 import { FcMenu } from "react-icons/fc";
+import { AppSheet } from "@/shared/AppSheet";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // toggle menu bar
-  const toggleMenu = () => {
-    setIsMenuOpen(() => !isMenuOpen);
-  };
-
-  console.log(isMenuOpen);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,7 +41,7 @@ const Header = () => {
             <Logo logoSize={155} isLogoDark={isScrolled} />
           </Link>
 
-          <NavigationBar isScrolled={isScrolled} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+          <NavigationBar isScrolled={isScrolled} />
         </div>
 
         <div
@@ -63,9 +56,7 @@ const Header = () => {
           <Link href="" className="text-[18px]">
             <FaRegUser />
           </Link>
-          <button className="text-[18px] block lg:hidden" onClick={toggleMenu}>
-            <FcMenu />
-          </button>
+          <AppSheet trigger={<FcMenu />} sheetTitle="Menu" side="right" />
         </div>
       </Container>
     </header>
