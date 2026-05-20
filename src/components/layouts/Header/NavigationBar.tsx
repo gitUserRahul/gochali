@@ -123,12 +123,12 @@ const NavigationBar = ({ isScrolled, isMenuOpen }) => {
                   >
                     {navItem.label}
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="absolute top-full transform -left-3.5 min-w-55 z-10">
-                    <ul className="bg-white py-2 flex flex-col gap-1 rounded-[8px] mt-2">
+                  <NavigationMenuContent className=" relative shadow-none lg:absolute top-full transform -left-3.5 min-w-55 z-10 md:bg-none ">
+                    <ul className="lg:bg-white py-2 flex flex-col gap-1 lg:rounded-[8px] mt-2 ">
                       {navItem.links.map((navLinkItem, navLinkIndex) => (
                         <li
                           key={navLinkIndex}
-                          className=" hover:bg-[#efefef] text-[#838383] hover:text-secondary-color rounded-[8px] duration-200 border-b-[#eef2f7] border-b last:border-b-0 w-full "
+                          className=" hover:bg-[#efefef] text-[#838383] hover:text-secondary-color lg:rounded-[8px] duration-200 lg:border-b-[#eef2f7] lg:border-b last:border-b-0 w-full "
                         >
                           {/* <NavigationMenuLink asChild> */}
                           <Link
